@@ -13,14 +13,14 @@ Open "wamp_dir\apache2\conf\bitnami\bitnami.conf" for editing. Edit similar line
 
 ### Step 2.1: (Optional) Add your site to your computer's HOSTS file
 Open the command prompt (cmd) with admin privileges. Edit "C:\Windows\System32\drivers\etc\hosts" adding the following lines:
-'''
+```
 	127.0.0.1	welkynd.com
 	::1			welkynd.com
-'''
+```
 
 When you enter "welkynd.com" as a url in a browser, it will redirect to your site. However, both windows and browsers cache DNS lookups for easy routing. If you have looked up "welkynd.com" and it has not successfully routed, you may need to type
-'''
+```
 ipconfig \flushdns
-'''
+```
 
 to flush windows' DNS cache. You will also need to restart the browser.
