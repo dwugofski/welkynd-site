@@ -11,7 +11,7 @@ Open "wamp_dir\apache2\conf\httpd.conf" for editing. Find a line that starts wit
 
 Open "wamp_dir\apache2\conf\bitnami\bitnami.conf" for editing. Edit similar lines the same way.
 
-### Step 2.5: (Optional) Add your site to your computer's HOSTS file
+### Step 2.1: (Optional) Add your site to your computer's HOSTS file
 Open the command prompt (cmd) with admin privileges. Edit "C:\Windows\System32\drivers\etc\hosts" adding the following lines:
 '''
 	127.0.0.1	welkynd.com
