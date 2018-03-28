@@ -1,0 +1,96 @@
+
+body #content #main form {
+	input[type=text] {
+		background-color: $bgcolorB1;
+		border: none;
+		box-sizing: border-box;
+		display: block;
+		font-family: $sans_font;
+		font-size: 100%;
+		height: 1em;
+		padding: 1em;
+		width: 100%;
+	}
+	input[type=text]:focus {
+		box-shadow: 0 0 1em $highshade inset;
+		outline: none;
+	}
+
+	textarea {
+		background-color: $bgcolorB1;
+		border: none;
+		box-sizing: border-box;
+		display: block;
+		font-family: $sans_font;
+		font-size: 100%;
+		height: 10em;
+		margin-bottom: 1em;
+		padding: 1em;
+		resize: none;
+		width: 100%;
+	}
+	textarea:focus {
+		box-shadow: 0 0 1em $highshade inset;
+		outline: none;
+	}
+
+	label {
+		display: block;
+		font-family: $serif_font;
+		margin: 0.5em 0 0.2em 0;
+	}
+
+	.spacer {
+		margin-bottom: 1em;
+	}
+
+	div.sugg_input {
+		margin-bottom: 1em;
+		position: relative;
+
+		input[type=text]{
+			border-bottom: 0.2em solid $highdark;
+			border-left: 0.2em solid $highdark;
+			height: 1em;
+			padding: 1em;
+			width: 40%;
+		}
+		input[type=text]:focus {
+			box-shadow: 0 0 0.2em $highshade inset;
+		}
+
+		div.list {
+			display: block;
+			border-bottom: 0.2em solid $highdark;
+			border-left: 0.2em solid $highdark;
+			border-right: 0.2em solid $highdark;
+			left: 0;
+			position: absolute;
+			top: 2em;
+			min-width: 30%;
+			max-width: 40%;
+			overflow: hidden;
+			z-index: 2;
+
+			div.item {
+				background-color: $bgcolorB1;
+				color: $fgcolorD1;
+				font-size: 80%;
+				outline: 0;
+				padding-left: 0.5em;
+			}
+			div.item.dialog {
+				font-style: italic;
+			}
+			div.item.sel:focus {
+				background-color: $highdark;
+				color: $fgcolor1;
+			}
+			div.item.sel:hover {
+				background-color: $bgcolor1;
+				color: $fgcolor1;
+				cursor: pointer;
+			}
+		}
+	}
+}

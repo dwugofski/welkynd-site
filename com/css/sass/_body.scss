@@ -1,0 +1,62 @@
+
+body {
+	background-color: $trueback;
+	background-image: url("../../res/pic/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-size: cover;
+	font-size: 12pt;
+	font-family: $sans_font;
+	margin: 0;
+
+	#screen {
+		background-color: $bgcolor1;
+		display: none;
+		height: 100%;
+		left: 0;
+		opacity: 0.7;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 50;
+	}
+
+	div.sub {
+		background-color: $highdark;
+		border: none;
+		color: $fgcolor1;
+		cursor: pointer;
+		display: block;
+		float: right;
+		font-size: 110%;
+		margin-top: 1em;
+		padding: 0.5em 1em 0.5em 1em;
+
+		@include transition(background-color 0.4s);
+	}
+	div.sub:hover {
+		background-color: $highshade;
+	}
+	div.sub:focus {
+		background-color: $highshade;
+		box-shadow: 0 0 0.2em $highlight;
+		outline: none;
+	}
+
+	.errorbox {
+		box-sizing: border-box;
+		color: $highlight;
+		display: none;
+		font-family: $serif_font;
+		font-size: 85%;
+		font-style: italic;
+		padding: 0.5em;
+		text-align: center;
+		width: 100%;
+	}
+
+	.hidden {
+		display: none;
+	}
+}

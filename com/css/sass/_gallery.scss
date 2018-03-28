@@ -1,0 +1,167 @@
+
+body #content #main #panels #cpanel {
+	#gallery, .galbox {
+		border-spacing: 0.5em;
+		table-layout: fixed;
+		vertical-align: top;
+		width: 100%;
+
+		td {
+			padding: 0;
+			position: relative;
+			width: calc(25% - 1em);
+
+			img {
+				width: 100%;
+
+				@include transition(box-shadow 0.4s);	
+			}
+
+
+			div {
+				background-color: $bgcolor05;
+				box-sizing: border-box;
+				color: $fgcolor1;
+				cursor: pointer;
+				height: 100%;
+				left: 0;
+				opacity: 1;
+				padding: 0.5em;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 2;
+
+				@include transition(opacity 0.4s);
+			}
+		}
+		td.displayed {
+			div {
+				opacity: 0;
+			}
+		}
+		td:hover {
+			img {
+				box-shadow: 0 0 0.5em $bgcolor1 inset;
+			}
+
+			div {
+				opacity: 0;	
+			}
+		}
+	}
+
+	#gal_sec {
+		#gal_disp {
+			margin-bottom: 2em;
+
+			#img_wrap {
+				margin-bottom: 2em;
+				position: relative;
+
+				#img_disp {
+					box-sizing: border-box;
+					cursor: zoom-in;
+					display: block;
+					margin: 0 auto;
+					min-height: 20em;
+					max-height: 30em;
+					max-width: calc(100% - 10em);
+				}
+
+				#img_arrow_r {
+					background-image: url(../../res/pic/arrow_r.png);
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+					cursor: pointer;
+					left: calc(100% - 4em);
+					height: 12em;
+					opacity: 0.2;
+					position: absolute;
+					top: calc(50% - 6em);
+					width: 4em;
+					z-index: 2;
+
+					@include transition(opacity 0.4s);
+				}
+				#img_arrow_l {
+					@extend #img_arrow_r;
+					background-image: url(../../res/pic/arrow_l.png);
+					left: 0;
+				}
+				#img_arrow_r:hover, #img_arrow_l:hover {
+					opacity: 1;
+				}
+			}
+
+			#picdesc {
+				padding: 0.5em;
+			}
+		}
+	}
+
+	#upl_sec {
+		#upl_load {
+			display: none;
+			text-align: center;
+
+			img {
+				width: 12em;
+				margin: 0 auto;
+			}
+		}
+
+		#detail_form {
+			@extend #det_sec;
+		}
+	}
+
+	#del_sec {
+		.del_albm {
+			border-top: 0.1em solid $highdark;
+			color: $fgcolor1;
+			font-size: 120%;
+			padding: 0.2em;
+		}
+
+		.del_albm:hover {
+			background-color: $highlight_alt;
+			border-top: 0.1em solid $highdark_alt;
+			color: $highdark_alt;
+			cursor: pointer;
+			font-weight: bold;
+		}
+	}
+
+	#det_sec{
+		display: none;
+
+		.img_item {
+			border-top: 0.1em solid $highdark;
+			padding-top: 1em;
+
+			.img_holder {
+				float: right;
+				width: 40%;
+				display: table-cell;
+				text-align: center;
+
+				img {
+					margin: 0 auto;
+					max-width: 95%;
+					max-height: 10em;
+					cursor: zoom-in;
+				}
+			}
+			.inp_holder {
+				width: 60%;
+				float: left;
+
+				textarea {
+					height: 7em;
+				}
+			}
+		}
+	}
+}

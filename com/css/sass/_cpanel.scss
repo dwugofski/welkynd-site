@@ -1,0 +1,71 @@
+
+body #content #main #panels #cpanel {
+	vertical-align: top;
+
+	section {
+		display: none;
+
+		h1 {
+			display: block;
+			font-size: 130%;
+			font-family: $title-font;
+			margin: 0.5em 0 0.5em 0;
+		}
+		h2 {
+			display: block;
+			font-size: 120%;
+			font-family: $sans-font;
+			margin: 0.5em 0 0.5em 0;
+		}
+		h3 {
+			display: block;
+			font-size: 100%;
+			font-family: $sans-font;
+			margin: 0;
+			padding: 0em;
+		}
+		h1 + h3 {
+			color: $highdark;
+			font-size: 90%;
+			margin-top: -0.9em;
+		}
+		p {
+			text-indent: 1em;
+			margin: 0 0 1em 0;
+		}
+
+		.readable {
+			background-color: transparent;
+
+			@include transition(background-color 0.4s, border-color 0.4s, color 0.3s);
+
+			h1 {
+				color: $fgcolor1;
+			}
+			h2 {
+				color: $highlight;
+			}
+			h3 {
+				color: $highdark;
+			}
+			p {
+				color: $fgcolor1;
+			}
+		}
+		.readable:hover {
+			background-color: $bgcolorB1;
+			h1 {
+				color: $fgcolorD1;
+			}
+			h2 {
+				color: $highdark;
+			}
+			h3 {
+				color: $highdark;
+			}
+			p {
+				color: $fgcolorD1;
+			}
+		}
+	}
+}

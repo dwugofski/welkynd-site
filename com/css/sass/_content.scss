@@ -1,0 +1,85 @@
+
+body #content {
+	margin: 0 auto;
+	margin-bottom: 10em;
+	width: 65em;
+
+	#header {
+		display: block;
+		height: 2em;
+		text-align: right;
+
+		span {
+			color: $fgcolor1;
+			display: inline-block;
+			font-family: $sans_font;
+			font-size: 75%;
+			padding: 1em 0.2em 0.2em 0.2em;
+
+			a {
+				color: $highlight;
+				cursor: pointer;
+				display: inline-block;
+				text-decoration: none;
+			}
+		}
+	}
+
+	#title {
+		background-image: url('../../res/pic/title.png');
+		background-repeat: no-repeat;
+		background-position: center; 
+		background-size: auto 100%;
+		height: 8em;
+		margin: 1em 0 3em 0;
+	}
+
+	#main {
+		#options {
+			box-shadow: 0 0 0.5em $highlight;
+			display: table;
+			margin: 0 0 1em 0;
+    		table-layout: fixed;
+    		width: 100%;
+
+			a {
+				background-color: $bgcolor05;
+				color: $fgcolor1;
+				display: table-cell;
+				font-family: $title-font;
+				padding: 0.5em 0 0.5em 0;
+				text-align: center;
+				text-decoration: none;
+
+				@include transition(background-color 0.4s, color 0.4s);
+			}
+			a:hover{
+				background-color: $bgcolor1;
+				color: $highlight;
+				cursor: pointer;
+			}
+		}
+
+		#panels {
+			background-color: $bgcolor1;
+			border-spacing: 1em;
+			color: $fgcolor1;
+    		table-layout: fixed;
+			width: 100%;
+		}
+	}
+
+	.fl {
+		float: left;
+	}
+	.fr {
+		float: right;
+	}
+	.clearer {
+		clear: both;
+	}
+
+	.highlight {
+		color: $highlight;
+	}
+}

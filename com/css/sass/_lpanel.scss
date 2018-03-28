@@ -1,0 +1,95 @@
+
+body #content #main #panels #lpanel {
+	width: 20%;
+	vertical-align: top;
+
+	.prompt {
+		font-size: 80%;
+
+		h1 {
+			color: $highlight;
+			cursor: pointer;
+			font-family: $serif_font;
+			font-size: 120%;
+			font-weight: normal;
+			margin: 0 0 0.2em 0;
+			padding: 0.2em;
+			text-align: center;
+			text-decoration: none;
+
+			@include transition(background-color 0.4s, color 0.3s);
+		}
+		h1:hover {
+			background-color: $highdark;
+			color: $fgcolor1;
+		}
+
+		h2 {
+			font-size: 100%;
+			font-style: italic;
+			font-weight: normal;
+			margin: 0 0 1em 0;
+			text-align: center;
+		}
+
+		p {
+			margin: 0 0 1em 0;
+			text-indent: 1em;
+		}
+
+		ul {
+			list-style-type: none;
+			margin-top: -0.5em;
+			padding-left: 1em;
+
+			li a {
+				cursor: pointer;
+			}
+			li a:hover {
+				color: $highlight;
+			}
+		}
+	}
+
+	#lnav {
+		margin-bottom: 1em;
+
+		a {
+			background-color: $highdark;
+			color: white;
+			cursor: pointer;
+			display: block;
+			font-family: $sans_font;
+			font-size: 100%;
+			margin-right: 1em;
+			padding: 0.3em 0.6em 0.3em 0.6em;
+
+			@include transition(background-color 0.4s, font-size 0.4s, margin 0.4s);
+		}
+		a:hover {
+			background-color: $highshade;
+		}
+		a.current {
+			background-color: $highshade;
+			font-size: 110%;
+			margin: 0.2em 0.5em 0.2em 0;
+		}
+
+		a.sub {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: 1.5em;
+			font-size: 90%;
+		}
+		a.sub.current {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		a.sub.first {
+			margin-top: 0.2em;
+		}
+		a.sub.last {
+			margin-bottom: 0.2em;
+		}
+	}
+}

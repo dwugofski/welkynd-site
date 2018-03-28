@@ -1,0 +1,761 @@
+@import url("https://fonts.googleapis.com/css?family=Fondamento|Metamorphous|Noto+Sans|Stoke|Ubuntu+Mono");
+.viewer-title {
+  color: #146B68 !important;
+}
+
+.viewer-container {
+  background-color: rgba(233, 251, 250, 0.8) !important;
+}
+
+body {
+  background-color: black;
+  background-image: url("../../res/pic/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-size: 12pt;
+  font-family: "Noto Sans", "Calibri", sans-serif;
+  margin: 0;
+}
+body #screen {
+  background-color: black;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0.7;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+body div.sub {
+  background-color: #146B68;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  float: right;
+  font-size: 110%;
+  margin-top: 1em;
+  padding: 0.5em 1em 0.5em 1em;
+  -moz-transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+body div.sub:hover {
+  background-color: #0C413F;
+}
+body div.sub:focus {
+  background-color: #0C413F;
+  box-shadow: 0 0 0.2em #70E4E1;
+  outline: none;
+}
+body .errorbox {
+  box-sizing: border-box;
+  color: #70E4E1;
+  display: none;
+  font-family: "Stoke", "Constantia", serif;
+  font-size: 85%;
+  font-style: italic;
+  padding: 0.5em;
+  text-align: center;
+  width: 100%;
+}
+body .hidden {
+  display: none;
+}
+
+body #content {
+  margin: 0 auto;
+  margin-bottom: 10em;
+  width: 65em;
+}
+body #content #header {
+  display: block;
+  height: 2em;
+  text-align: right;
+}
+body #content #header span {
+  color: white;
+  display: inline-block;
+  font-family: "Noto Sans", "Calibri", sans-serif;
+  font-size: 75%;
+  padding: 1em 0.2em 0.2em 0.2em;
+}
+body #content #header span a {
+  color: #70E4E1;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+body #content #title {
+  background-image: url("../../res/pic/title.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  height: 8em;
+  margin: 1em 0 3em 0;
+}
+body #content #main #options {
+  box-shadow: 0 0 0.5em #70E4E1;
+  display: table;
+  margin: 0 0 1em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+body #content #main #options a {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: table-cell;
+  font-family: "Metamorphous", serif;
+  padding: 0.5em 0 0.5em 0;
+  text-align: center;
+  text-decoration: none;
+  -moz-transition: background-color 0.4s, color 0.4s;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+body #content #main #options a:hover {
+  background-color: black;
+  color: #70E4E1;
+  cursor: pointer;
+}
+body #content #main #panels {
+  background-color: black;
+  border-spacing: 1em;
+  color: white;
+  table-layout: fixed;
+  width: 100%;
+}
+body #content .fl {
+  float: left;
+}
+body #content .fr {
+  float: right;
+}
+body #content .clearer {
+  clear: both;
+}
+body #content .highlight {
+  color: #70E4E1;
+}
+
+body #content #main #panels #lpanel {
+  width: 20%;
+  vertical-align: top;
+}
+body #content #main #panels #lpanel .prompt {
+  font-size: 80%;
+}
+body #content #main #panels #lpanel .prompt h1 {
+  color: #70E4E1;
+  cursor: pointer;
+  font-family: "Stoke", "Constantia", serif;
+  font-size: 120%;
+  font-weight: normal;
+  margin: 0 0 0.2em 0;
+  padding: 0.2em;
+  text-align: center;
+  text-decoration: none;
+  -moz-transition: background-color 0.4s, color 0.3s;
+  -webkit-transition: background-color 0.4s, color 0.3s;
+  transition: background-color 0.4s, color 0.3s;
+}
+body #content #main #panels #lpanel .prompt h1:hover {
+  background-color: #146B68;
+  color: white;
+}
+body #content #main #panels #lpanel .prompt h2 {
+  font-size: 100%;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 0 1em 0;
+  text-align: center;
+}
+body #content #main #panels #lpanel .prompt p {
+  margin: 0 0 1em 0;
+  text-indent: 1em;
+}
+body #content #main #panels #lpanel .prompt ul {
+  list-style-type: none;
+  margin-top: -0.5em;
+  padding-left: 1em;
+}
+body #content #main #panels #lpanel .prompt ul li a {
+  cursor: pointer;
+}
+body #content #main #panels #lpanel .prompt ul li a:hover {
+  color: #70E4E1;
+}
+body #content #main #panels #lpanel #lnav {
+  margin-bottom: 1em;
+}
+body #content #main #panels #lpanel #lnav a {
+  background-color: #146B68;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: "Noto Sans", "Calibri", sans-serif;
+  font-size: 100%;
+  margin-right: 1em;
+  padding: 0.3em 0.6em 0.3em 0.6em;
+  -moz-transition: background-color 0.4s, font-size 0.4s, margin 0.4s;
+  -webkit-transition: background-color 0.4s, font-size 0.4s, margin 0.4s;
+  transition: background-color 0.4s, font-size 0.4s, margin 0.4s;
+}
+body #content #main #panels #lpanel #lnav a:hover {
+  background-color: #0C413F;
+}
+body #content #main #panels #lpanel #lnav a.current {
+  background-color: #0C413F;
+  font-size: 110%;
+  margin: 0.2em 0.5em 0.2em 0;
+}
+body #content #main #panels #lpanel #lnav a.sub {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 1.5em;
+  font-size: 90%;
+}
+body #content #main #panels #lpanel #lnav a.sub.current {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body #content #main #panels #lpanel #lnav a.sub.first {
+  margin-top: 0.2em;
+}
+body #content #main #panels #lpanel #lnav a.sub.last {
+  margin-bottom: 0.2em;
+}
+
+body #content #main #panels #cpanel {
+  vertical-align: top;
+}
+body #content #main #panels #cpanel section {
+  display: none;
+}
+body #content #main #panels #cpanel section h1 {
+  display: block;
+  font-size: 130%;
+  font-family: "Metamorphous", serif;
+  margin: 0.5em 0 0.5em 0;
+}
+body #content #main #panels #cpanel section h2 {
+  display: block;
+  font-size: 120%;
+  font-family: "Noto Sans", "Calibri", sans-serif;
+  margin: 0.5em 0 0.5em 0;
+}
+body #content #main #panels #cpanel section h3 {
+  display: block;
+  font-size: 100%;
+  font-family: "Noto Sans", "Calibri", sans-serif;
+  margin: 0;
+  padding: 0em;
+}
+body #content #main #panels #cpanel section h1 + h3 {
+  color: #146B68;
+  font-size: 90%;
+  margin-top: -0.9em;
+}
+body #content #main #panels #cpanel section p {
+  text-indent: 1em;
+  margin: 0 0 1em 0;
+}
+body #content #main #panels #cpanel section .readable {
+  background-color: transparent;
+  -moz-transition: background-color 0.4s, border-color 0.4s, color 0.3s;
+  -webkit-transition: background-color 0.4s, border-color 0.4s, color 0.3s;
+  transition: background-color 0.4s, border-color 0.4s, color 0.3s;
+}
+body #content #main #panels #cpanel section .readable h1 {
+  color: white;
+}
+body #content #main #panels #cpanel section .readable h2 {
+  color: #70E4E1;
+}
+body #content #main #panels #cpanel section .readable h3 {
+  color: #146B68;
+}
+body #content #main #panels #cpanel section .readable p {
+  color: white;
+}
+body #content #main #panels #cpanel section .readable:hover {
+  background-color: #e9fbfa;
+}
+body #content #main #panels #cpanel section .readable:hover h1 {
+  color: black;
+}
+body #content #main #panels #cpanel section .readable:hover h2 {
+  color: #146B68;
+}
+body #content #main #panels #cpanel section .readable:hover h3 {
+  color: #146B68;
+}
+body #content #main #panels #cpanel section .readable:hover p {
+  color: black;
+}
+
+body #content #main #panels #cpanel {
+  vertical-align: top;
+}
+body #content #main #panels #cpanel #about_sec .blurb {
+  background-color: black;
+  border-top: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  font-size: 85%;
+  color: white;
+  margin-bottom: 1em;
+  padding: 1em 1em 0.01em 1em;
+}
+body #content #main #panels #cpanel #about_sec .blurb p {
+  text-indent: 0;
+}
+body #content #main #panels #cpanel #about_sec #officers {
+  table-layout: fixed;
+  border-spacing: 1.5em 0;
+}
+body #content #main #panels #cpanel #about_sec #officers th {
+  color: #70E4E1;
+  font-weight: bold;
+  text-align: left;
+}
+body #content #main #panels #cpanel #about_sec #officers td {
+  font-style: italic;
+  vertical-align: top;
+}
+body #content #main #panels #cpanel .announcetag {
+  position: relative;
+  background-color: transparent;
+  border-left: 0.5em solid #70E4E1;
+  font-size: 85%;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  padding: 1em 1em 0.01em 1em;
+  -moz-transition: background-color 0.4s, border-color 0.4s, color 0.3s;
+  -webkit-transition: background-color 0.4s, border-color 0.4s, color 0.3s;
+  transition: background-color 0.4s, border-color 0.4s, color 0.3s;
+}
+body #content #main #panels #cpanel .announcetag h1 {
+  color: #70E4E1;
+  font-size: 110%;
+  font-weight: bold;
+  width: 50%;
+  -moz-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+body #content #main #panels #cpanel .announcetag h2 {
+  color: #70E4E1;
+  font-style: italic;
+  font-size: 80%;
+  width: 25%;
+  -moz-transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+body #content #main #panels #cpanel .announcetag .ann_del {
+  display: none;
+}
+body #content #main #panels #cpanel .announcetag .ann_edit {
+  display: none;
+}
+body #content #main #panels #cpanel .announcetag .ann_msg strong {
+  font-weight: bold;
+  font-size: 120%;
+  color: #146B68;
+}
+body #content #main #panels #cpanel .announcetag .ann_msg em {
+  color: #70E4E1;
+}
+body #content #main #panels #cpanel .announcetag .ann_msg p {
+  text-indent: 0;
+}
+body #content #main #panels #cpanel .announcetag:hover {
+  background-color: #e9fbfa;
+  border-color: #146B68;
+  color: black;
+}
+body #content #main #panels #cpanel .announcetag:hover h1, body #content #main #panels #cpanel .announcetag:hover h2 {
+  color: #146B68;
+}
+body #content #main #panels #cpanel .announcetag:hover .ann_del {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  height: 1em;
+  width: 1em;
+  background-image: url("../../res/pic/del_button.png");
+  background-size: cover;
+}
+body #content #main #panels #cpanel .announcetag:hover .ann_del:hover {
+  background-image: url("../../res/pic/del_button_hov.png");
+}
+body #content #main #panels #cpanel .announcetag:hover .ann_edit {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right: 2em;
+  height: 1em;
+  width: 1em;
+  background-image: url("../../res/pic/edit_button.png");
+  background-size: cover;
+}
+body #content #main #panels #cpanel .announcetag:hover .ann_edit:hover {
+  background-image: url("../../res/pic/edit_button_hov.png");
+}
+
+body #content #main #panels #cpanel #make_sec form input[type=text] {
+  background-color: #e9fbfa;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 100%;
+  height: 1em;
+  padding: 1em;
+  width: 100%;
+}
+body #content #main #panels #cpanel #make_sec form input[type=text]:focus {
+  box-shadow: 0 0 1em #0C413F inset;
+  outline: none;
+}
+body #content #main #panels #cpanel #make_sec form textarea {
+  background-color: #e9fbfa;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 100%;
+  height: 10em;
+  padding: 1em;
+  resize: none;
+  width: 100%;
+}
+body #content #main #panels #cpanel #make_sec form textarea:focus {
+  box-shadow: 0 0 1em #0C413F inset;
+  outline: none;
+}
+body #content #main #panels #cpanel #make_sec form label {
+  display: block;
+  font-family: "Stoke", "Constantia", serif;
+  margin: 0.5em 0 0.2em 0;
+}
+
+body #content #main #panels #cpanel #past_sec #pann_loading {
+  width: 20%;
+  margin: 1em 40% 1em 40%;
+}
+body #content #main #panels #cpanel #past_sec #pann_loading img {
+  width: 100%;
+}
+body #content #main #panels #cpanel #past_sec .pann_buttons .sub {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+body #content #main #panels #cpanel #gallery, body #content #main #panels #cpanel .galbox {
+  border-spacing: 0.5em;
+  table-layout: fixed;
+  vertical-align: top;
+  width: 100%;
+}
+body #content #main #panels #cpanel #gallery td, body #content #main #panels #cpanel .galbox td {
+  padding: 0;
+  position: relative;
+  width: calc(25% - 1em);
+}
+body #content #main #panels #cpanel #gallery td img, body #content #main #panels #cpanel .galbox td img {
+  width: 100%;
+  -moz-transition: box-shadow 0.4s;
+  -webkit-transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+}
+body #content #main #panels #cpanel #gallery td div, body #content #main #panels #cpanel .galbox td div {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  padding: 0.5em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  -moz-transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+body #content #main #panels #cpanel #gallery td.displayed div, body #content #main #panels #cpanel .galbox td.displayed div {
+  opacity: 0;
+}
+body #content #main #panels #cpanel #gallery td:hover img, body #content #main #panels #cpanel .galbox td:hover img {
+  box-shadow: 0 0 0.5em black inset;
+}
+body #content #main #panels #cpanel #gallery td:hover div, body #content #main #panels #cpanel .galbox td:hover div {
+  opacity: 0;
+}
+body #content #main #panels #cpanel #gal_sec #gal_disp {
+  margin-bottom: 2em;
+}
+body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap {
+  margin-bottom: 2em;
+  position: relative;
+}
+body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap #img_disp {
+  box-sizing: border-box;
+  cursor: zoom-in;
+  display: block;
+  margin: 0 auto;
+  min-height: 20em;
+  max-height: 30em;
+  max-width: calc(100% - 10em);
+}
+body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap #img_arrow_r, body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap #img_arrow_l {
+  background-image: url(../../res/pic/arrow_r.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  left: calc(100% - 4em);
+  height: 12em;
+  opacity: 0.2;
+  position: absolute;
+  top: calc(50% - 6em);
+  width: 4em;
+  z-index: 2;
+  -moz-transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap #img_arrow_l {
+  background-image: url(../../res/pic/arrow_l.png);
+  left: 0;
+}
+body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap #img_arrow_r:hover, body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap #img_arrow_l:hover, body #content #main #panels #cpanel #gal_sec #gal_disp #img_wrap #img_arrow_l:hover {
+  opacity: 1;
+}
+body #content #main #panels #cpanel #gal_sec #gal_disp #picdesc {
+  padding: 0.5em;
+}
+body #content #main #panels #cpanel #upl_sec #upl_load {
+  display: none;
+  text-align: center;
+}
+body #content #main #panels #cpanel #upl_sec #upl_load img {
+  width: 12em;
+  margin: 0 auto;
+}
+body #content #main #panels #cpanel #del_sec .del_albm {
+  border-top: 0.1em solid #146B68;
+  color: white;
+  font-size: 120%;
+  padding: 0.2em;
+}
+body #content #main #panels #cpanel #del_sec .del_albm:hover {
+  background-color: #E47070;
+  border-top: 0.1em solid #B42222;
+  color: #B42222;
+  cursor: pointer;
+  font-weight: bold;
+}
+body #content #main #panels #cpanel #det_sec, body #content #main #panels #cpanel #upl_sec #detail_form {
+  display: none;
+}
+body #content #main #panels #cpanel #det_sec .img_item, body #content #main #panels #cpanel #upl_sec #detail_form .img_item {
+  border-top: 0.1em solid #146B68;
+  padding-top: 1em;
+}
+body #content #main #panels #cpanel #det_sec .img_item .img_holder, body #content #main #panels #cpanel #upl_sec #detail_form .img_item .img_holder {
+  float: right;
+  width: 40%;
+  display: table-cell;
+  text-align: center;
+}
+body #content #main #panels #cpanel #det_sec .img_item .img_holder img, body #content #main #panels #cpanel #upl_sec #detail_form .img_item .img_holder img {
+  margin: 0 auto;
+  max-width: 95%;
+  max-height: 10em;
+  cursor: zoom-in;
+}
+body #content #main #panels #cpanel #det_sec .img_item .inp_holder, body #content #main #panels #cpanel #upl_sec #detail_form .img_item .inp_holder {
+  width: 60%;
+  float: left;
+}
+body #content #main #panels #cpanel #det_sec .img_item .inp_holder textarea, body #content #main #panels #cpanel #upl_sec #detail_form .img_item .inp_holder textarea {
+  height: 7em;
+}
+
+body #loginbox {
+  background-color: black;
+  box-shadow: 0 0 0.5em #70E4E1;
+  color: white;
+  display: none;
+  left: calc(50% - 30em);
+  position: fixed;
+  top: 6em;
+  width: 60em;
+  z-index: 51;
+}
+body #loginbox h1 {
+  font-family: "Metamorphous", serif;
+  font-size: 150%;
+}
+body #loginbox form label {
+  display: block;
+  font-family: "Stoke", "Constantia", serif;
+  margin: 0.5em 0 0.2em 0;
+}
+body #loginbox form label.req {
+  color: #70E4E1;
+}
+body #loginbox form input {
+  background-color: #e9fbfa;
+  border: none;
+  box-sizing: border-box;
+  padding: 0.5em;
+  width: 100%;
+}
+body #loginbox form input:focus {
+  box-shadow: 0 0 0.5em #0C413F inset;
+  outline: none;
+}
+body #loginbox .wrapper {
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+body #loginbox .wrapper .lcol {
+  box-sizing: border-box;
+  padding: 0.5em;
+  vertical-align: top;
+  width: 30%;
+}
+body #loginbox .wrapper .mcol {
+  width: 0.2em;
+}
+body #loginbox .wrapper .mcol div {
+  background-clip: content-box;
+  background-color: #70E4E1;
+  height: 100%;
+  padding: 0.5em 0 0.5em 0;
+}
+body #loginbox .wrapper .rcol {
+  padding: 0.5em;
+  vertical-align: top;
+}
+body #loginbox .wrapper .rcol table {
+  border-spacing: 0.5em;
+  margin: -1em 0 0 -0.5em;
+  table-layout: fixed;
+  width: 100%;
+}
+body #loginbox .wrapper .rcol table td {
+  vertical-align: top;
+  width: 50%;
+}
+body #loginbox .exit {
+  background-image: url("../../res/pic/exit_button.png");
+  background-size: 100% 100%;
+  cursor: pointer;
+  height: 1em;
+  left: calc(100% - 1.5em);
+  position: absolute;
+  top: 0.5em;
+  width: 1em;
+}
+
+body #content #main form input[type=text] {
+  background-color: #e9fbfa;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Noto Sans", "Calibri", sans-serif;
+  font-size: 100%;
+  height: 1em;
+  padding: 1em;
+  width: 100%;
+}
+body #content #main form input[type=text]:focus {
+  box-shadow: 0 0 1em #0C413F inset;
+  outline: none;
+}
+body #content #main form textarea {
+  background-color: #e9fbfa;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Noto Sans", "Calibri", sans-serif;
+  font-size: 100%;
+  height: 10em;
+  margin-bottom: 1em;
+  padding: 1em;
+  resize: none;
+  width: 100%;
+}
+body #content #main form textarea:focus {
+  box-shadow: 0 0 1em #0C413F inset;
+  outline: none;
+}
+body #content #main form label {
+  display: block;
+  font-family: "Stoke", "Constantia", serif;
+  margin: 0.5em 0 0.2em 0;
+}
+body #content #main form .spacer {
+  margin-bottom: 1em;
+}
+body #content #main form div.sugg_input {
+  margin-bottom: 1em;
+  position: relative;
+}
+body #content #main form div.sugg_input input[type=text] {
+  border-bottom: 0.2em solid #146B68;
+  border-left: 0.2em solid #146B68;
+  height: 1em;
+  padding: 1em;
+  width: 40%;
+}
+body #content #main form div.sugg_input input[type=text]:focus {
+  box-shadow: 0 0 0.2em #0C413F inset;
+}
+body #content #main form div.sugg_input div.list {
+  display: block;
+  border-bottom: 0.2em solid #146B68;
+  border-left: 0.2em solid #146B68;
+  border-right: 0.2em solid #146B68;
+  left: 0;
+  position: absolute;
+  top: 2em;
+  min-width: 30%;
+  max-width: 40%;
+  overflow: hidden;
+  z-index: 2;
+}
+body #content #main form div.sugg_input div.list div.item {
+  background-color: #e9fbfa;
+  color: black;
+  font-size: 80%;
+  outline: 0;
+  padding-left: 0.5em;
+}
+body #content #main form div.sugg_input div.list div.item.dialog {
+  font-style: italic;
+}
+body #content #main form div.sugg_input div.list div.item.sel:focus {
+  background-color: #146B68;
+  color: white;
+}
+body #content #main form div.sugg_input div.list div.item.sel:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,90 @@
+body #loginbox {
+	background-color: $bgcolor1;
+	//border: 0.2em solid $highlight;
+	box-shadow: 0 0 0.5em $highlight;
+	color: $fgcolor1;
+	display: none;
+	left: calc(50% - 30em);
+	position: fixed;
+	top: 6em;
+	width: 60em;
+	z-index: 51;
+
+	h1 {
+		font-family: $title_font;
+		font-size: 150%;
+	}
+
+	form {
+		label {
+			display: block;
+			font-family: $serif_font;
+			margin: 0.5em 0 0.2em 0;
+		}
+		label.req {
+			color: $highlight;
+		}
+
+		input {
+			background-color: $bgcolorB1;
+			border: none;
+			box-sizing: border-box;
+			padding: 0.5em;
+			width: 100%;
+		}
+		input:focus {
+			box-shadow: 0 0 0.5em $highshade inset;
+			outline: none;
+		}
+	}
+
+	.wrapper {
+		table-layout: fixed;
+		width: 100%;
+		height: 100%;
+
+		.lcol {
+			box-sizing: border-box;
+			padding: 0.5em;
+			vertical-align: top;
+			width: 30%;
+		}
+		.mcol {
+			width: 0.2em;
+
+			div {
+				background-clip: content-box;
+				background-color: $highlight;
+				height: 100%;
+				padding: 0.5em 0 0.5em 0;
+			}
+		}
+		.rcol {
+			padding: 0.5em;
+			vertical-align: top;
+
+			table {
+				border-spacing: 0.5em;
+				margin: -1em 0 0 -0.5em;
+				table-layout: fixed;
+				width: 100%;
+
+				td {
+					vertical-align: top;
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	.exit {
+		background-image: url('../../res/pic/exit_button.png');
+		background-size: 100% 100%;
+		cursor: pointer;
+		height: 1em;
+		left: calc(100% - 1.5em);
+		position: absolute;
+		top: 0.5em;
+		width: 1em;
+	}
+}

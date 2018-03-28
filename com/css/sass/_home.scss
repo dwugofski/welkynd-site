@@ -1,0 +1,129 @@
+
+body #content #main #panels #cpanel {
+	vertical-align: top;
+
+	#about_sec {
+
+		.blurb {
+			background-color: $bgcolor1;
+			border-top: 0.1em solid $fgcolor1;
+			border-bottom: 0.1em solid $fgcolor1;
+			font-size: 85%;
+			color: $fgcolor1;
+			margin-bottom: 1em;
+			padding: 1em 1em 0.01em 1em;
+
+			p {
+				text-indent: 0;
+			}
+		}
+
+		#officers {
+			table-layout: fixed;
+			border-spacing: 1.5em 0;
+
+			th {
+				color: $highlight;
+				font-weight: bold;
+				text-align: left;
+			}
+
+			td {
+				font-style: italic;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.announcetag {
+		position: relative;
+		background-color: transparent;
+		border-left: 0.5em solid $highlight;
+		font-size: 85%;
+		margin-bottom: 1em;
+		margin-left: 0.5em;
+		padding: 1em 1em 0.01em 1em;
+		
+		@include transition(background-color 0.4s, border-color 0.4s, color 0.3s);
+
+		h1 {
+			color: $highlight;
+			font-size: 110%;
+			font-weight: bold;
+			width: 50%;
+
+			@include transition(color 0.3s);
+		}
+		h2 {
+			color: $highlight;
+			font-style: italic;
+			font-size: 80%;
+			width: 25%;
+
+			@include transition(color 0.3s);
+		}
+
+		.ann_del {
+			display: none;
+		}
+
+		.ann_edit {
+			display: none;
+		}
+
+		.ann_msg {
+			strong {
+				font-weight: bold;
+				font-size: 120%;
+				color: $highdark;
+			}
+
+			em {
+				color: $highlight;
+			}
+
+			p {
+				text-indent: 0;
+			}
+		}
+	}
+	.announcetag:hover {
+		background-color: $bgcolorB1;
+		border-color: $highdark;
+		color: $fgcolorD1;
+
+		h1, h2 {
+			color: $highdark;
+		}
+
+		.ann_del {
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			top: 0.5em;
+			right: 0.5em;
+			height: 1em;
+			width: 1em;
+			background-image: url('../../res/pic/del_button.png');
+			background-size: cover;
+		}
+		.ann_del:hover {
+			background-image: url('../../res/pic/del_button_hov.png');
+		}
+
+		.ann_edit {
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			top: 0.5em;
+			right: 2em;
+			height: 1em;
+			width: 1em;
+			background-image: url('../../res/pic/edit_button.png');
+			background-size: cover;
+		}
+		.ann_edit:hover {
+			background-image: url('../../res/pic/edit_button_hov.png');
+		}
+	}
+}
